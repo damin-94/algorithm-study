@@ -46,19 +46,19 @@ class DoublyLinkedList:
 
 
 # 3. 테스트 코드
-nodes = DoublyLinkedList()
+L = DoublyLinkedList()
 
-n10 = nodes.insert(nodes.head, 10)
-n30 = nodes.insert(n10, 30)
-n20 = nodes.insert(n10, 20)  # 10과 30 사이에 20 삽입
+n1 = L.insert(L.head, 10)
+n2 = L.insert(n1, 20)
+n3 = L.insert(n2, 30)  
 
-print("10의 오른쪽:", n10.rlink.data)
-print("30의 왼쪽:", n30.llink.data)
-
+print("10의 오른쪽:", n1.rlink.data)
+print("30의 왼쪽:", n3.llink.data)
 print("삭제 전:", end=" ")
-nodes.print_list()
 
-nodes.delete(n20)
+L.print_list()
+
+L.delete(n2)
 
 print("삭제 후:", end=" ")
-nodes.print_list()
+L.print_list()
