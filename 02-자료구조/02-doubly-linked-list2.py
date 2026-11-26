@@ -138,12 +138,50 @@ L.insert_first(10)
 L.insert_last(30)
 L.insert_after(10, 20)
 
-L.print_forward()       # 10 20 30
-L.print_backward()      # 30 20 10
+L.print_forward()       
+L.print_backward()      
 
 L.delete(20)
-L.print_forward()       # 10 30
+L.print_forward()       
 
-L.delete_first()        # 10 삭제
-L.delete_last()         # 30 삭제
-print(L.head, L.tail)   # 빈 리스트 확인
+L.delete_first()        
+L.delete_last()         
+print(L.head, L.tail)   
+
+# 2장 28쪽 - 테스트 코드
+
+L = DoublyLinkedList()
+
+# 삽입 테스트
+L.insert_first(20)
+L.insert_first(10)
+L.insert_last(30)
+L.insert_last(40)
+
+print("Forward:")
+L.print_forward()
+
+print("Backward:")
+L.print_backward()
+
+# 중간 삽입 테스트
+L.insert_after(20, 25)
+
+print("After insert:")
+L.print_forward()
+
+# 삭제 테스트
+L.delete_first()
+L.delete_last()
+L.delete(25)
+
+print("After delete:")
+L.print_forward()
+
+# 탐색 테스트
+node = L.search(30)
+
+if node is not None:
+    print("Found:", node.data)
+else:
+    print("Not found")
