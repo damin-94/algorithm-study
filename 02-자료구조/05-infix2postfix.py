@@ -1,4 +1,3 @@
-# 2장 52쪽 - 전위연산에서 후위연산 변환
 import re
 
 class Infix2Postfix:
