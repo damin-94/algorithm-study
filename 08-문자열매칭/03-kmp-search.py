@@ -47,7 +47,6 @@ def kmp_search(pattern, border, text):
     return -1
 
 
-# 8장 10쪽 - 실행 예제
 text = "BAABAABAB"
 pattern = "BAABAB"
 
